@@ -47,7 +47,6 @@
     "meta-rapids-and-rivers-cli": "https://github.com/navikt/rapids-and-rivers-cli.git",
     "meta-rustfri": "https://github.com/navikt/rustfri.git",
     "meta-tbd": "https://github.com/navikt/tbd.git",
-    "meta-tbd-datadeling": "https://github.com/navikt/tbd-datadeling.git",
     "meta-tbd-libs": "https://github.com/navikt/tbd-libs.git",
     "meta-ws-proxy": "https://github.com/navikt/ws-proxy.git"
   }
