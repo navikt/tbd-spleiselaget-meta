@@ -38,6 +38,72 @@ Dersom du nå åpner `build.gradle.kts` med `Open` (som Project) i IntelliJ så 
 Det enkleste er å kjøre `./lag_meta_json.sh` ettersom den vil selv innhente alle repos hvor `tbd` er owner,
 og dytte resultatet inn i `.meta` (den ekskluderer også ting som er tagget med `speilvendt`).
 
+## Hvordan .... ?
+### Oppgradere Gradle wrapper
+
+```
+make upgrade-gradle
+```
+Kommandoen vil gå gjennom alle prosjektene og bumpe gradle til siste versjon, bygge/teste koden, og commit'e til slutt.
+Du kan bekrefte commits etterpå ved å kjøre:
+```
+make list-local-commits
+```
+
+For å shippe det så kjører du
+```
+meta git push
+```
+### Oppgradere Kotlin JVM
+
+```
+KOTLIN_VERSION=2.0.21 make upgrade-kotlin-jvm
+```
+Kommandoen vil gå gjennom alle prosjektene og bumpe kotlin jvm til siste versjon, bygge/teste koden, og commit'e til slutt.
+Du kan bekrefte commits etterpå ved å kjøre:
+```
+make list-local-commits
+```
+
+For å shippe det så kjører du
+```
+meta git push
+```
+
+_Forutsetninger_: koden forutsetter at det finnes en `build.gradle.kts`-fil med en slik linje:
+```kotlin
+kotlin("jvm") version "en_versjon_her"
+```
+
+### Oppgradere Java language version
+
+```
+JAVA_LANGUAGE_VERSION=22 make upgrade-java-language-version
+```
+Kommandoen vil gå gjennom alle prosjektene og bumpe java language version til siste versjon, bygge/teste koden, og commit'e til slutt.
+Du kan bekrefte commits etterpå ved å kjøre:
+```
+make list-local-commits
+```
+
+For å shippe det så kjører du
+```
+meta git push
+```
+
+_Forutsetning_: koden forutsetter at det finnes en `build.gradle.kts`-fil med en slik linje:
+```kotlin
+languageVersion.set(JavaLanguageVersion.of("en_versjon_her"))
+```
+for eksempel noe sånn:
+```kotlin
+kotlin {
+    jvmToolchain {
+        languageVersion.set(JavaLanguageVersion.of("21"))
+    }
+}
+```
+
 ## Henvendelser
 Spørsmål knyttet til koden eller prosjektet kan stilles som issues her på GitHub.
 
