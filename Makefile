@@ -9,6 +9,9 @@ help:
 pull:
 	@meta exec "git pull --all --rebase --autostash" --parallel --exclude "$(meta_project)"
 
+build:
+	@meta exec 'test -f ./gradlew && ./gradlew -q build || true' --exclude "$(meta_project)"
+
 list-local-commits: ## shows local, unpushed, commits
 	@meta exec "git log --oneline origin/HEAD..HEAD | cat" --exclude "$(meta_project)"
 
