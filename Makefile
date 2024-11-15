@@ -12,6 +12,9 @@ pull:
 build:
 	@meta exec 'test -f ./gradlew && ./gradlew -q build || true' --exclude "$(meta_project)"
 
+deps:
+	@meta exec 'test -f ./gradlew && ./gradlew dependencies $$(./gradlew -q projects | grep -Fe ---\ Project | sed -n "s/.*'"':\([^']*\)'.*/:\1:dependencies/p"'") > gradle_deps.txt || true' --parallel --exclude "$(meta_project)"
+
 list-local-commits: ## shows local, unpushed, commits
 	@meta exec "git log --oneline origin/HEAD..HEAD | cat" --exclude "$(meta_project)"
 
