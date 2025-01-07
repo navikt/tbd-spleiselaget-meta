@@ -29,3 +29,7 @@ upgrade-kotlin-jvm: ## Upgrade kotlin in all projects - usage KOTLIN_VERSION=x.x
 
 upgrade-java-language-version: ## Upgrade langauge version in all projects - usage JAVA_LANGUAGE_VERSION=x.x.x make upgrade-java-language-version
 	@meta exec "$(root_dir).bin/upgrade_java_language_version.sh" --exclude "$(meta_project)"
+
+upgrade-editorconfig: ## Upgrade how to lint in all projects - make update-java-editorconfig
+	@meta exec "$(root_dir).bin/update_editorconfig.sh" --exclude "$(meta_project)"
+

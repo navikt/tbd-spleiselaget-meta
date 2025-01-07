@@ -104,6 +104,21 @@ kotlin {
 }
 ```
 
+### Oppdatere linting i alle prosjekt
+
+Gjør endringer i .editorconfig på root.
+Kjør kommandoen
+```
+make upgrade-editorconfig
+```
+
+Kommandoen vil gå gjennom alle prosjektene og endre til nyeste versjon, og commit'e til slutt.
+Du kan bekrefte commits etterpå ved å kjøre:
+
+```
+make list-local-commits
+```
+
 ## Henvendelser
 Spørsmål knyttet til koden eller prosjektet kan stilles som issues her på GitHub.
 
