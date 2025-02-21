@@ -47,6 +47,7 @@
     "meta-rapids-and-rivers-cli": "https://github.com/navikt/rapids-and-rivers-cli.git",
     "meta-rustfri": "https://github.com/navikt/rustfri.git",
     "meta-tbd-libs": "https://github.com/navikt/tbd-libs.git",
-    "meta-ws-proxy": "https://github.com/navikt/ws-proxy.git"
+    "meta-ws-proxy": "https://github.com/navikt/ws-proxy.git",
+    "meta-helse-spesidaler": "https://github.com/navikt/helse-spesidaler.git"
   }
 }
