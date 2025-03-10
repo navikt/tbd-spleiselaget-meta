@@ -23,6 +23,7 @@
     "meta-helse-spekemat": "https://github.com/navikt/helse-spekemat.git",
     "meta-helse-spenn": "https://github.com/navikt/helse-spenn.git",
     "meta-helse-spennende": "https://github.com/navikt/helse-spennende.git",
+    "meta-helse-spesidaler": "https://github.com/navikt/helse-spesidaler.git",
     "meta-helse-spetakkel": "https://github.com/navikt/helse-spetakkel.git",
     "meta-helse-spill-av-im": "https://github.com/navikt/helse-spill-av-im.git",
     "meta-helse-spleis": "https://github.com/navikt/helse-spleis.git",
@@ -47,7 +48,7 @@
     "meta-rapids-and-rivers-cli": "https://github.com/navikt/rapids-and-rivers-cli.git",
     "meta-rustfri": "https://github.com/navikt/rustfri.git",
     "meta-tbd-libs": "https://github.com/navikt/tbd-libs.git",
-    "meta-ws-proxy": "https://github.com/navikt/ws-proxy.git",
-    "meta-helse-spesidaler": "https://github.com/navikt/helse-spesidaler.git"
+    "meta-tbd-scripts": "https://github.com/navikt/tbd-scripts.git",
+    "meta-ws-proxy": "https://github.com/navikt/ws-proxy.git"
   }
 }
