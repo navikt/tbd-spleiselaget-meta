@@ -33,3 +33,5 @@ upgrade-java-language-version: ## Upgrade langauge version in all projects - usa
 upgrade-editorconfig: ## Upgrade how to lint in all projects - make update-java-editorconfig
 	@meta exec "$(root_dir).bin/update_editorconfig.sh" --exclude "$(meta_project)"
 
+remove_deploy_key: ## Fjerner NAIS_DEPLOY_APIKEY fra alle repoene
+	@meta exec "gh secret delete NAIS_DEPLOY_APIKEY" --parallel --exclude "$(meta_project)"
