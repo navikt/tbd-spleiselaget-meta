@@ -10,6 +10,7 @@ echo "Stashing ..."
 git stash -u
 echo "Upgrading ..."
 ./gradlew wrapper --gradle-version=latest --distribution-type bin
+./gradlew wrapper
 echo "Building post-upgrade ..."
 ./gradlew -q --warning-mode=all build
 echo "Committing changes ..."
