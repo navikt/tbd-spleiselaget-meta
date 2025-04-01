@@ -6,8 +6,6 @@ if [ -z ${KOTLIN_VERSION+x} ]; then
   exit 1
 fi
 
-echo "Stashing ..."
-git stash -u
 echo "Upgrading ..."
 find . -name "build.gradle.kts" -exec sed -i '' 's/kotlin("jvm") version "[^"]*"/kotlin("jvm") version "'$KOTLIN_VERSION'"/g' {} +
 echo "Building post-upgrade ..."

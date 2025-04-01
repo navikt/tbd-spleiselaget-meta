@@ -6,8 +6,6 @@ if [ -z ${JAVA_LANGUAGE_VERSION+x} ]; then
   exit 1
 fi
 
-echo "Stashing ..."
-git stash -u
 echo "Upgrading ..."
 find . -name "build.gradle.kts" -exec sed -i '' 's/languageVersion.set(JavaLanguageVersion.of([^)]*))/languageVersion.set(JavaLanguageVersion.of("'$JAVA_LANGUAGE_VERSION'"))/g' {} +
 echo "Building post-upgrade ..."

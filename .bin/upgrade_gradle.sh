@@ -6,8 +6,7 @@ if ! test -f build.gradle.kts; then
   exit 0
 
 fi
-echo "Stashing ..."
-git stash -u
+
 echo "Upgrading ..."
 ./gradlew wrapper --gradle-version=latest --distribution-type bin
 ./gradlew wrapper
