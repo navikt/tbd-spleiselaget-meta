@@ -15,7 +15,6 @@
     "meta-helse-spapi": "https://github.com/navikt/helse-spapi.git",
     "meta-helse-spare": "https://github.com/navikt/helse-spare.git",
     "meta-helse-sparkelapper": "https://github.com/navikt/helse-sparkelapper.git",
-    "meta-helse-sparker-feriepenger": "https://github.com/navikt/helse-sparker-feriepenger.git",
     "meta-helse-sparsom": "https://github.com/navikt/helse-sparsom.git",
     "meta-helse-spedisjon": "https://github.com/navikt/helse-spedisjon.git",
     "meta-helse-speed": "https://github.com/navikt/helse-speed.git",
