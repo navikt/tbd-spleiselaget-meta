@@ -37,5 +37,5 @@ remove_deploy_key: ## Fjerner NAIS_DEPLOY_APIKEY fra alle repoene
 	@meta exec "gh secret delete NAIS_DEPLOY_APIKEY" --parallel --exclude "$(meta_project)"
 
 describe: ## Printer ut beskrivelse av alle repoer
-	@meta exec "gh repo view --json description -q '.[\"description\"]'"
+	@meta exec "gh repo view --json description -q '.[\"description\"]'" --exclude "$(meta_project)"
 
