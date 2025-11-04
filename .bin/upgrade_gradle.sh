@@ -11,7 +11,7 @@ echo "Upgrading ..."
 ./gradlew wrapper >/dev/null 2>&1
 
 echo "Building post-upgrade ..."
-output=$(./gradlew -q --warning-mode=all build 2>&1)
+output=$(./gradlew -q --warning-mode=all build --dry-run 2>&1)
 exit_code=$?
 if [ $exit_code -ne 0 ]; then
   echo "$output"
