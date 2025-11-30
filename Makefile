@@ -39,3 +39,5 @@ remove_deploy_key: ## Fjerner NAIS_DEPLOY_APIKEY fra alle repoene
 describe: ## Printer ut beskrivelse av alle repoer
 	@meta exec "gh repo view --json description -q '.[\"description\"]'" --exclude "$(meta_project)"
 
+finnfnr: ## Printer ut fødselsnummer fra git-historikken
+	@meta exec "git log -p | grep -E '\b[0-9]{11}\b'"
