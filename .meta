@@ -22,6 +22,7 @@
     "meta-helse-spesidaler": "https://github.com/navikt/helse-spesidaler.git",
     "meta-helse-spetakkel": "https://github.com/navikt/helse-spetakkel.git",
     "meta-helse-spill-av-im": "https://github.com/navikt/helse-spill-av-im.git",
+    "meta-helse-spiskammers": "https://github.com/navikt/helse-spiskammers.git",
     "meta-helse-spleis": "https://github.com/navikt/helse-spleis.git",
     "meta-helse-spleis-testdata": "https://github.com/navikt/helse-spleis-testdata.git",
     "meta-helse-spock": "https://github.com/navikt/helse-spock.git",
