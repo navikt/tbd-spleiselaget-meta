@@ -41,3 +41,6 @@ describe: ## Printer ut beskrivelse av alle repoer
 
 finnfnr: ## Printer ut fødselsnummer fra git-historikken
 	@meta exec "git log -p | grep -E '\b[0-9]{11}\b'"
+
+bygg-alt-på-nytt:
+	@meta exec "$(root_dir).bin/bygg_alt_på_nytt.sh" --exclude "$(meta_project)"
