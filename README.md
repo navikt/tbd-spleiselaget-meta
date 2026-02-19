@@ -38,6 +38,8 @@ Dersom du nå åpner `build.gradle.kts` med `Open` (som Project) i IntelliJ så 
 Det enkleste er å kjøre `./lag_meta_json.sh` ettersom den vil selv innhente alle repos hvor `tbd` er owner,
 og dytte resultatet inn i `.meta` (den ekskluderer også ting som er tagget med `speilvendt`).
 
+Så kjører du `meta git update` for å clone nye repositories. Om det er et gradle-prosjekt må den også legges inn i `settings.gradle`
+
 ## Hvordan .... ?
 ### Oppgradere Gradle wrapper
 
