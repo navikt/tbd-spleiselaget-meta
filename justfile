@@ -12,6 +12,14 @@ push:
 regret:
     @meta exec "git checkout ." --parallel
 
+# viser frem lokale commits
+list-commit:
+    @meta exec "git log --oneline @{u}..HEAD | cat"
+
+# oppdaterer alle til siste gradle-versjon
+upgrade_gradle:
+    @meta exec "{{ justfile_directory() }}/.bin/upgrade_gradle.sh" --parallel
+
 # "versjon" er den nye kotlin-versjonen alle repoene skal bygges på
 upgrade_kotlin versjon:
     @KOTLIN_VERSION={{ versjon }} meta exec "{{ justfile_directory() }}/.bin/upgrade_kotlin_jvm.sh"
