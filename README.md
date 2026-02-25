@@ -8,15 +8,22 @@ Du må ha installert:
 - gh (`brew install gh`)
 - (og sikkert flere ting)
 
+## en optional forutsetning:
+
+`brew install just`
+
+.. eller hvordan du ellers har lyst til å installere `just` på akkurat _din_ maskin.
+
+
 ## Komme i gang
 
 [meta](https://github.com/mateodelnorte/meta) brukes til å sette opp
 repositories for alle repoene.
 
-Enn så lenge må du sørge for å ha `npm` installert (`brew install node`).
+Enn så lenge må du sørge for å ha `pnpm` installert (`brew install node`).
 
 ```
-npm install meta -g --no-save
+pnpm install meta -g --no-save
 ```
 
 Merk! meta foran vanlig clone-kommando:
@@ -41,6 +48,15 @@ og dytte resultatet inn i `.meta` (den ekskluderer også ting som er tagget med 
 Så kjører du `meta git update` for å clone nye repositories. Om det er et gradle-prosjekt må den også legges inn i `settings.gradle`
 
 ## Hvordan .... ?
+
+Alt nedenfor som refererer til `make` kan potenselt bli erstattet av `just`, men med kulere syntax.
+
+### Finne ut av hva jeg kan gjøre med `just`
+
+`just --list`
+
+og så besøke https://just.systems/man/en/ om du har lyst til å skjønne `just`
+
 ### Oppgradere Gradle wrapper
 
 ```
