@@ -23,3 +23,7 @@ upgrade_gradle:
 # "versjon" er den nye kotlin-versjonen alle repoene skal bygges på
 upgrade_kotlin versjon:
     @KOTLIN_VERSION={{ versjon }} meta exec "{{ justfile_directory() }}/.bin/upgrade_kotlin_jvm.sh"
+
+# viser short description av alle repoer
+describe:
+    @meta exec "gh repo view --json description -q '.[\"description\"]'"
