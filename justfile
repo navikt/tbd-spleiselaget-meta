@@ -13,7 +13,7 @@ regret:
     @meta exec "git checkout ." --parallel
 
 # viser frem lokale commits
-list-commit:
+list-commits:
     @meta exec "git log --oneline @{u}..HEAD | cat"
 
 # oppdaterer alle til siste gradle-versjon
