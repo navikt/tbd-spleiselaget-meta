@@ -14,6 +14,10 @@ push:
 regret:
     @meta exec "git checkout ." --parallel
 
+# slett alle filer som git ikke vet om
+clean:
+    @meta exec "git clean -f" --parallel
+
 # viser frem lokale commits
 list-commits:
     @meta exec "git log --oneline @{u}..HEAD | cat" --exclude "{{meta_project}}"
