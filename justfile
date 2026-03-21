@@ -1,8 +1,9 @@
 # installer just med `brew install just`
-# note to self (og kanskje andre?): just skal erstatte _make_, ikke _meta_
-# note2 to self: finn ut hvorfor folk synes just er bedre enn make -- ser ikke ut som en kjempeforskjell enda
 
 meta_project := file_name(justfile_directory())
+
+default:
+    @just --list
 
 pull:
     @meta exec "git pull --all --rebase --autostash" --parallel --exclude "{{meta_project}}"
