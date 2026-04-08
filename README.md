@@ -1,4 +1,4 @@
-Meta for spleiselaget
+Meta for Team SAS
 =====================
 
 ## Noen forutsetninger
@@ -28,11 +28,11 @@ pnpm install meta -g --no-save
 
 Merk! meta foran vanlig clone-kommando:
 ```
-meta git clone https://github.com/navikt/tbd-spleiselaget-meta.git
+meta git clone git@github.com:navikt/helse-sas-meta.git
 ```
 
-Du kloner altså _ikke_ `tbd-spleiselaget-meta` med vanlig git, du må gå via `meta`. 
-Kommandoen over vil opprette en mappe kalt `tbd-spleiselaget-meta`, med alle prosjekter listet i `.meta` inni seg.
+Du kloner altså _ikke_ `helse-sas-meta` med vanlig git, du må gå via `meta`. 
+Kommandoen over vil opprette en mappe kalt `helse-sas-meta`, med alle prosjekter listet i `.meta` inni seg.
 
 Nå kan git brukes som normalt for hvert repo.
 
@@ -43,7 +43,7 @@ Dersom du nå åpner `build.gradle.kts` med `Open` (som Project) i IntelliJ så 
 ## Legge til nye repos?
 
 Det enkleste er å kjøre `./lag_meta_json.sh` ettersom den vil selv innhente alle repos hvor `tbd` er owner,
-og dytte resultatet inn i `.meta` (den ekskluderer også ting som er tagget med `speilvendt`).
+og dytte resultatet inn i `.meta` (den ekskluderer også noen repoer Team SAS ikke eier - se [lag_meta_json.sh](lag_meta_json.sh)).
 
 Så kjører du `meta git update` for å clone nye repositories. Om det er et gradle-prosjekt må den også legges inn i `settings.gradle`
 
@@ -141,4 +141,4 @@ make list-local-commits
 Spørsmål knyttet til koden eller prosjektet kan stilles som issues her på GitHub.
 
 ### For NAV-ansatte
-Interne henvendelser kan sendes via Slack i kanalen ![#team-bømlo-værsågod](https://nav-it.slack.com/archives/C019637N90X).
+Interne henvendelser kan sendes via Slack i kanalen ![#team-sas-værsågod](https://nav-it.slack.com/archives/C019637N90X).
