@@ -1,4 +1,4 @@
-rootProject.name = "spleiselaget meta-repo"
+rootProject.name = "helse-sas-meta"
 
 includeBuild "meta-bomlo-bigquery-terraform"
 includeBuild "meta-bomlo-cli"
