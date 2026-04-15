@@ -4,3 +4,4 @@
 
 meta-*
 *.swp
+.pull-state

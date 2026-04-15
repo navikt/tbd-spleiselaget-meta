@@ -50,3 +50,7 @@ describe:
 # bygg alt på nytt
 bygg-alt-pa-nytt:
     @meta exec "{{ justfile_directory() }}/.bin/bygg_alt_på_nytt.sh" --exclude "{{meta_project}}"
+
+# pull alle repos og vis nye commits siden sist
+pull-and-describe:
+    @{{ justfile_directory() }}/pull-and-describe.sh
