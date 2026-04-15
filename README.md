@@ -42,8 +42,8 @@ Dersom du nå åpner `build.gradle.kts` med `Open` (som Project) i IntelliJ så 
 
 ## Legge til nye repos?
 
-Det enkleste er å kjøre `./lag_meta_json.sh` ettersom den vil selv innhente alle repos hvor `tbd` er owner,
-og dytte resultatet inn i `.meta` (den ekskluderer også noen repoer Team SAS ikke eier - se [lag_meta_json.sh](lag_meta_json.sh)).
+Det enkleste er å kjøre `./oppdater_metaoppsett.sh` ettersom den vil selv innhente alle repos hvor `tbd` er owner,
+og dytte resultatet inn i `.meta` (den ekskluderer også noen repoer Team SAS ikke eier - se [oppdater_metaoppsett.sh](oppdater_metaoppsett.sh)).
 
 Så kjører du `meta git update` for å clone nye repositories. Om det er et gradle-prosjekt må den også legges inn i `settings.gradle`
 
