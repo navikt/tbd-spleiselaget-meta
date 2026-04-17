@@ -2,12 +2,15 @@
 
 meta_project := file_name(justfile_directory())
 
+# kjører om du ikke velger noe, lister ut denne lista
 default:
     @just --list
 
-pull:
+# pull alle repos
+pull-all:
     @meta exec "git pull --all --rebase --autostash" --parallel --exclude "{{meta_project}}"
 
+# pusher alle repos
 push:
     @meta exec "git push" --parallel
 
@@ -52,5 +55,5 @@ bygg-alt-pa-nytt:
     @meta exec "{{ justfile_directory() }}/.bin/bygg_alt_på_nytt.sh" --exclude "{{meta_project}}"
 
 # pull alle repos og vis nye commits siden sist
-pull-and-describe:
+pull:
     @{{ justfile_directory() }}/pull-and-describe.sh
