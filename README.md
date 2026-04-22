@@ -6,9 +6,15 @@ Meta for Team SAS
 Du må ha installert:
 - jq (`brew install jq`)
 - gh (`brew install gh`)
-- (og sikkert flere ting)
+- pnpm (for eksempel `brew install pnpm`)
 
-## en optional forutsetning:
+Du må kunne clone fra GitHub-URL-er på formatet `git@github.com:<repo>.git`
+  - en måte er å få git til å bytte til https under panseret:
+  - `git config --global url."https://github.com/".insteadOf git@github.com:`
+
+Det kan være flere ting du må ha på plass. Spør en vennlig sjel - og oppdater gjerne denne filen etterpå :D
+
+### En valgfri forutsetning
 
 `brew install just`
 
@@ -17,24 +23,21 @@ Du må ha installert:
 
 ## Komme i gang
 
-[meta](https://github.com/mateodelnorte/meta) brukes til å sette opp
-repositories for alle repoene.
+For å hente og sette opp alle repoene brukes [meta](https://github.com/mateodelnorte/meta) - altså **ikke** vanlige git-kommandoer.
 
-Enn så lenge må du sørge for å ha `pnpm` installert (`brew install node`).
-
+Først installerer man meta
 ```
-pnpm install meta -g --no-save
+pnpm install meta -g
 ```
 
-Merk! meta foran vanlig clone-kommando:
+Så bruker man meta for å hente alle repoene:
 ```
 meta git clone git@github.com:navikt/helse-sas-meta.git
 ```
 
-Du kloner altså _ikke_ `helse-sas-meta` med vanlig git, du må gå via `meta`. 
-Kommandoen over vil opprette en mappe kalt `helse-sas-meta`, med alle prosjekter listet i `.meta` inni seg.
+Kommandoen over vil opprette en mappe kalt `helse-sas-meta`, med alle prosjektene våre (det vil si; alle som er listet i `.meta`) inni seg.
 
-Nå kan git brukes som normalt for hvert repo.
+Deretter kan man bruke git som normalt for hvert repo.
 
 Se [meta](https://github.com/mateodelnorte/meta) for flere kommandoer.
 
@@ -42,7 +45,7 @@ Dersom du nå åpner `build.gradle.kts` med `Open` (som Project) i IntelliJ så 
 
 ## Legge til nye repos?
 
-Det enkleste er å kjøre `./oppdater_metaoppsett.sh` ettersom den vil selv innhente alle repos hvor `tbd` er owner,
+Det enkleste er å kjøre `./oppdater_metaoppsett.sh` ettersom den selv vil innhente alle repos hvor `tbd` er owner,
 og dytte resultatet inn i `.meta` (den ekskluderer også noen repoer Team SAS ikke eier - se [oppdater_metaoppsett.sh](oppdater_metaoppsett.sh)).
 
 Så kjører du `meta git update` for å clone nye repositories. Om det er et gradle-prosjekt må den også legges inn i `settings.gradle`
@@ -62,56 +65,57 @@ og så besøke https://just.systems/man/en/ om du har lyst til å skjønne `just
 ```
 make upgrade-gradle
 ```
-Kommandoen vil gå gjennom alle prosjektene og bumpe gradle til siste versjon, bygge/teste koden, og commit'e til slutt.
+Kommandoen vil gå gjennom alle prosjektene og bumpe gradle til siste versjon, bygge/teste koden, og commite til slutt.
 Du kan bekrefte commits etterpå ved å kjøre:
 ```
 make list-local-commits
 ```
 
-For å shippe det så kjører du
+For å shippe det:
 ```
 meta git push
 ```
+
 ### Oppgradere Kotlin JVM
 
 ```
-KOTLIN_VERSION=2.0.21 make upgrade-kotlin-jvm
+KOTLIN_VERSION=<kotlin_versjon> make upgrade-kotlin-jvm
 ```
-Kommandoen vil gå gjennom alle prosjektene og bumpe kotlin jvm til siste versjon, bygge/teste koden, og commit'e til slutt.
+Kommandoen vil gå gjennom alle prosjektene og bumpe kotlin jvm til angitt versjon, bygge/teste koden, og commite til slutt.
 Du kan bekrefte commits etterpå ved å kjøre:
 ```
 make list-local-commits
 ```
 
-For å shippe det så kjører du
+For å shippe det:
 ```
 meta git push
 ```
 
 _Forutsetninger_: koden forutsetter at det finnes en `build.gradle.kts`-fil med en slik linje:
 ```kotlin
-kotlin("jvm") version "en_versjon_her"
+kotlin("jvm") version "<kotlin_versjon>"
 ```
 
-### Oppgradere Java language version
+### Oppgradere Java Language Version
 
 ```
-JAVA_LANGUAGE_VERSION=22 make upgrade-java-language-version
+JAVA_LANGUAGE_VERSION=<java_versjon> make upgrade-java-language-version
 ```
-Kommandoen vil gå gjennom alle prosjektene og bumpe java language version til siste versjon, bygge/teste koden, og commit'e til slutt.
+Kommandoen vil gå gjennom alle prosjektene og bumpe Java Language Version til siste versjon, bygge/teste koden, og commite til slutt.
 Du kan bekrefte commits etterpå ved å kjøre:
 ```
 make list-local-commits
 ```
 
-For å shippe det så kjører du
+For å shippe det:
 ```
 meta git push
 ```
 
 _Forutsetning_: koden forutsetter at det finnes en `build.gradle.kts`-fil med en slik linje:
 ```kotlin
-languageVersion.set(JavaLanguageVersion.of("en_versjon_her"))
+languageVersion.set(JavaLanguageVersion.of("java_versjon"))
 ```
 for eksempel noe sånn:
 ```kotlin
@@ -130,7 +134,7 @@ Kjør kommandoen
 make upgrade-editorconfig
 ```
 
-Kommandoen vil gå gjennom alle prosjektene og endre til nyeste versjon, og commit'e til slutt.
+Kommandoen vil gå gjennom alle prosjektene og endre til nyeste versjon, og commite til slutt.
 Du kan bekrefte commits etterpå ved å kjøre:
 
 ```
