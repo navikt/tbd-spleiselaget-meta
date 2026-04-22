@@ -52,7 +52,7 @@ Så kjører du `meta git update` for å clone nye repositories. Om det er et gra
 
 ## Hvordan .... ?
 
-Alt nedenfor som refererer til `make` kan potenselt bli erstattet av `just`, men med kulere syntax.
+Alt nedenfor som refererer til `make` kan erstattes av `just`, men dobbeltsjekk syntaxen (den er kulere syntax med just).
 
 ### Finne ut av hva jeg kan gjøre med `just`
 
