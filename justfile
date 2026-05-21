@@ -24,7 +24,7 @@ clean:
 
 # viser frem lokale commits
 list-commits:
-    @meta exec "git log --oneline @{u}..HEAD | cat" --exclude "{{meta_project}}"
+    @meta exec "git log --pretty=format:%s @{u}..HEAD" --exclude "{{meta_project}}"
 
 # vis lokale commits og bestem om du vil pushe
 prepush-review:
