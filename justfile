@@ -57,3 +57,21 @@ bygg-alt-pa-nytt:
 # pull alle repos og vis nye commits siden sist
 pull:
     @{{ justfile_directory() }}/pull-and-describe.sh
+
+list-prs:
+    @meta exec 'output=$( \
+        gh pr list \
+            --json number,title,createdAt \
+            --jq ".[] | \"#\(.number) \(.title) (\(.createdAt[0:10]))\"" \
+        ); \
+        [ -n "$output" ] && echo "$output" \
+        ' --parallel --exclude "{{meta_project}}"
+
+list-prs-opprettet-i-dag:
+    @meta exec 'output=$( \
+            gh pr list --search "created:>$(date -v-1d +%F)" \
+                --json number,title \
+                --jq ".[] | \"#\(.number) \(.title)\"" \
+        ); \
+        [ -n "$output" ] && echo "$output" \
+        ' --parallel --exclude "{{meta_project}}"
