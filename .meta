@@ -12,6 +12,7 @@
     "redteam": "git@github.com:navikt/helse-redteam.git",
     "risk-mock": "git@github.com:navikt/helse-risk-mock.git",
     "sas-github-workflows": "git@github.com:navikt/helse-sas-github-workflows.git",
+    "sas-gradle-plugins": "git@github.com:navikt/helse-sas-gradle-plugins.git",
     "sp-forsikring": "git@github.com:navikt/helse-sp-forsikring.git",
     "spaghet": "git@github.com:navikt/helse-spaghet.git",
     "spalten": "git@github.com:navikt/helse-spalten.git",
