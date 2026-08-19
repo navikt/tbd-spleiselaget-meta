@@ -14,6 +14,7 @@
     "sas-github-workflows": "git@github.com:navikt/helse-sas-github-workflows.git",
     "sas-gradle-plugins": "git@github.com:navikt/helse-sas-gradle-plugins.git",
     "sp-forsikring": "git@github.com:navikt/helse-sp-forsikring.git",
+    "sp-vilkarsproving": "git@github.com:navikt/helse-sp-vilkarsproving.git",
     "spaghet": "git@github.com:navikt/helse-spaghet.git",
     "spalten": "git@github.com:navikt/helse-spalten.git",
     "spammer": "git@github.com:navikt/helse-spammer.git",
