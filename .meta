@@ -61,6 +61,7 @@
     "spurtedu": "git@github.com:navikt/helse-spurtedu.git",
     "spydig": "git@github.com:navikt/helse-spydig.git",
     "sykepenger-libs": "git@github.com:navikt/sykepenger-libs.git",
+    "sykepenger-web": "git@github.com:navikt/helse-sykepenger-web.git",
     "tbd": "git@github.com:navikt/tbd.git",
     "tbd-libs": "git@github.com:navikt/tbd-libs.git",
     "vedtaksfeed": "git@github.com:navikt/helse-vedtaksfeed.git",
